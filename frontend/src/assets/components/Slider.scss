@@ -1,0 +1,198 @@
+.swiper_container_outer{
+  padding: 40px 0;
+  .swiper_heading{
+    color: #1a59da;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0px 0 30px 0;
+    @media (max-width: 500px) {
+      font-size: 28px;
+
+    }
+  }
+
+  .cities_swiper {
+
+    height: auto;
+    padding: 0px 0;
+    position: relative;
+    width: auto;
+  
+    @media (max-width: 500px) {
+      height: 50vh;
+    }
+  
+    .swiper-slide {
+      width: 37rem;
+      height: 100%;
+      position: relative;
+      @media (max-width:767px) {
+        width: 100%;
+      }
+  
+  
+      .swiper-slide-shadow-left {
+        display: none;
+      }
+  
+      .swiper-slide-shadow-right {
+        display: none;
+      }
+  
+      img {
+        width: 37rem;
+        height: 40vh;
+        border-radius: 2rem;
+        object-fit: cover;
+  
+        @media (max-width: 500px) {
+          width: 90vw !important;
+        }
+      }
+    }
+  
+    .slider-controler {
+      margin-top: 80px;
+      position: relative;
+      bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 20px;
+      @media (max-width:767px) {
+        margin-top: 0px;
+        column-gap: 10px;
+
+        
+
+      }
+      .slider-arrow{
+        &::after{
+          display: none;
+        }
+      }
+      .swiper-button-prev{
+        top: unset;
+        position: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
+      .swiper-button-next{
+        top: unset;
+        position: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+      }
+      .swiper-pagination {
+        top: unset;
+        position: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        width: fit-content !important;
+        margin-top: -20px;
+        
+        .swiper-pagination-bullet {
+          height: 10px;
+          width: 10px;
+          background-color: #404950;
+          filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+        }
+        .swiper-pagination-bullet-active {
+          background: #1a59da;
+          height: 12px;
+          width: 12px;
+        }
+      }
+  
+      
+  
+   
+  }
+}
+
+
+}
+
+.slick-slide {
+  width: 210px !important;
+}
+
+.tour_slider {
+
+  .slick-track {
+    display: flex !important;
+    justify-content: space-between !important;
+    @media screen and (max-width: 600px) {
+      
+    }
+  }
+}
+
+.slider-content {
+  position: relative;
+  h6 {
+    position: absolute;
+    bottom: 28px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+  }
+}
+
+.slider_btn_previous {
+  display: flex;
+  position: absolute;
+  left: 91%;
+  top: -77px;
+}
+
+.slider_btn_next {
+  display: flex;
+  position: absolute;
+  top: -77px;
+}
+
+.testimonial_cards {
+  background-color: white;
+  box-shadow: 0px 0px 5px 3px rgba($color: #000000, $alpha: .3);
+  border-radius: 10px;
+}
+
+.swipe_slide_main_container {
+  padding: 10px;
+  padding-bottom: 40px !important; 
+}
+
+.slick-prev {
+  position: absolute;
+  top: -100px !important;
+  left: 90% !important;
+  @media screen and (max-width: 1300px) {
+    left: 88% !important;
+  }
+  @media screen and (max-width: 1024px) {
+    left: 85% !important;
+    display: none !important;
+  }
+}
+.slick-prev::before, 
+.slick-next::before { 
+  font-size: 35px !important;
+}
+
+.slick-next {
+  position: absolute;
+  top: -100px !important;
+  left: 93% !important;
+  @media screen and (max-width: 1300px) {
+    left: 92% !important;
+  }
+  @media screen and (max-width: 1024px) {
+    display: none !important;
+  }
+} 

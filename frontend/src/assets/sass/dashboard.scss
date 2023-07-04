@@ -1,0 +1,821 @@
+.admin_outer {
+    display: flex;
+    height: 100vh;
+
+    .Sidebar {
+        height: 100vh;
+        display: flex;
+        background-color: white;
+        width: 270px;
+        border-right: 2px solid #345FA6;
+        transition: all ease-in-out 0.3s;
+
+        @media (max-width:992px) {
+            width: auto;
+            position: fixed;
+            height: 100vh;
+            z-index: 11111;
+
+        }
+
+        .sidebar_inner {
+            transition: all ease-in-out 0.6s;
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 0 20px;
+
+            a {
+                text-decoration: none;
+                color: #345FA6;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .sidebar_dashboard_links {
+
+                display: flex;
+                flex-direction: column;
+
+                .transportation_booking_link {
+                    white-space: nowrap;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    border: 1px solid #345FA6;
+                    border-radius: 6px;
+                }
+
+                a {
+                    display: flex;
+                    column-gap: 8px;
+                    align-items: center;
+                    margin: 13px 0;
+                    padding-left: 10px;
+
+                }
+
+                .active {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    background-color: #345FA6;
+                    color: white;
+
+                    svg {
+                        fill: white;
+                    }
+                }
+            }
+
+            .sidebar_logo {
+                display: flex;
+                justify-content: center;
+                margin: 50px 0 20px 0;
+
+                .sidebar_logo_img {
+                    width: 140px;
+                    height: auto;
+
+                }
+            }
+
+        }
+
+    }
+
+    .hidden_Sidebar {
+        width: 0px;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+
+        @media (max-width:992px) {
+            width: 0;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar_inner {
+            transition: all ease-in-out 0.3s;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+
+            a {
+                text-decoration: none;
+                color: #345FA6;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .sidebar_dashboard_links {
+
+                display: flex;
+                flex-direction: column;
+
+                .transportation_booking_link {
+                    padding-top: 12px;
+                    white-space: nowrap;
+                    padding-bottom: 12px;
+                    padding-left: 10px;
+                    border: 1px solid #1a59da;
+                    border-radius: 6px;
+                }
+
+                a {
+                    display: flex;
+                    column-gap: 8px;
+                    align-items: center;
+                    margin: 13px 0;
+                    padding-left: 10px;
+
+                }
+
+                .active {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    background-color: #345FA6;
+                    color: white;
+
+                    svg {
+                        fill: white;
+                    }
+                }
+            }
+
+            .sidebar_logo {
+                display: flex;
+                justify-content: center;
+                margin: 50px 0 30px 0;
+
+                .sidebar_logo_img {
+                    width: 80%;
+
+                }
+            }
+
+        }
+
+    }
+
+    .admin_content_outer {
+        overflow-y: scroll;
+        flex: 1;
+
+        .Admin_navbar_top {
+            background-color:#345FA6;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+
+            @media (max-width:992px) {
+                justify-content: flex-end;
+
+            }
+
+            .Menu_Icon_div {
+                cursor: pointer;
+                width: fit-content;
+
+                svg {
+                    fill: white;
+                    height: 30px;
+                    width: auto;
+                }
+            }
+
+            .admin_top_nav_user_dropdown {
+                .user_button {
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 600;
+                    column-gap: 5px;
+
+                    svg {
+                        height: 30px;
+                        width: 30px;
+                        margin-top: -5px;
+                    }
+                }
+            }
+        }
+
+        .dashboar_body_wrapper {
+            .dashboard_about_cards{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                @media (max-width: 990px) {
+                    flex-direction: column;
+                }
+                .dashboard_about_cards_one{
+                    display: flex;
+                    @media (max-width: 550px) {
+                        flex-direction: column;
+                    }
+                    @media (max-width: 990px ) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .dashboard_about_cards_two{
+                    display: flex;
+                    @media (max-width: 550px) {
+                        flex-direction: column;
+                        margin-top: -20px;
+                    }
+                    @media (max-width: 990px) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .dashborad_about_card_body{
+                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    border-radius: 8px;
+                    margin-right: 30px;
+                    width: 50%;
+                    line-height: 200%;
+                    @media (max-width: 550px) {
+                        margin-bottom: 20px;
+                        margin-right: 0px;
+                    }
+                    @media (max-width: 550px) {
+                        width: auto;
+                    }
+                    // .dashborad_about_card_desc{
+                        // word-spacing: 10px ;
+                        // letter-spacing: 1px;
+                    // }
+                    .dashborad_about_card_content{
+                        padding: 20px ;
+                        .text-blue{
+                            color: #345FA6;
+                            font-weight: 600;
+                            text-decoration: none ;           
+                        }
+                        .about-seek{
+                            display: flex;
+                            .between-line{
+                                margin-left: 5px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .dashboard_posts_body{
+                margin-bottom: 20px;
+                margin-top: 20px;
+                .dashboard_posts_heading{
+                    display: flex;
+                    margin-top: 30px;
+                    @media (max-width: 990px) {
+                        flex-direction: column;
+                    }
+                    .more_posts_heading{
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        border-radius: 8px;
+                        padding: 10px;
+                        margin-left: auto;
+                        margin-bottom: 10px;
+                        @media (max-width: 990px) {
+                            margin-right: auto;
+                        }
+                        p{
+                            text-align: center;
+                            margin-top: 20px;
+                        }                
+                    }
+                  }
+                  .more-posts-body{
+                    display: flex;
+                    @media (max-width: 990px) {
+                        flex-direction: column;
+                    }
+                    .dashboard_posts_video_guide_body{
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        border-radius: 14px;
+                        margin-right: 50px;
+                        @media (max-width: 990px) {
+                            margin-left: auto;
+                            margin-right: auto;
+                            margin-bottom: 20px;
+                        }
+                        .dashboard_posts_video_guide_content{
+                            .dashboard_posts_video{
+
+                                width: 100%;
+                                iframe{
+                                    width: 100%;
+                                    height: 400px;
+                                    border-radius: 14px 14px 0 0;
+                                }
+                            }
+                            .dashboard_posts_video_guide_text{
+                                padding: 20px;
+                                .dashboar_body_heading{
+                                    color: #345FA6;
+                                }
+                                .freight-banner-button {
+                                    background-color: #345FA6;
+                                    border: none;
+                                    color: white;
+                                    padding: 10px 20px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    margin: 20px 2px;
+                                    cursor: pointer;
+                                    border-radius: 4px;
+                                  }
+                            }
+                            
+                        }
+                      }
+                      .posts_cards{
+                        .posts_cards_body{
+                            display: flex;
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            border-radius: 14px;
+                            margin-bottom: 20px;
+                            @media (max-width: 440px) {
+                                flex-direction: column;
+                            }
+                            .posts_cards_image{
+                                padding: 20px;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                @media (max-width: 440px) {
+                                    align-self: center;
+                                }
+                            }
+                            .posts_cards_content{
+                                margin: 10px 10px 10px 0px;
+                                @media (max-width: 440px) {
+                                    text-align: center;
+                                    margin-left: 5px;
+                                    margin-right: 5px;
+                                }
+                                .dashboar_body_heading{
+                                    color: #345FA6;
+                                }
+                            }
+                        }
+                      }
+                  }
+                  
+            }
+          
+
+            .sortable_table {
+
+                padding: 5px;
+                background-color: rgba (242, 241, 237, 0.8);
+                width: 100%;
+                overflow-x: scroll;
+
+                &::-webkit-scrollbar {
+                    height: 5px;
+                    /* height of horizontal scrollbar ← You're missing this */
+                    width: 4px;
+                    /* width of vertical scrollbar */
+                    border: 1px solid #d5d5d5;
+                    border-bottom-left-radius: 3px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background-color: white;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #345FA6;
+                }
+
+                table {
+                    width: 100%;
+                    padding: 10px;
+
+                    thead {
+                        th {
+                            padding: 10px;
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: #345FA6;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                padding: 10px;
+                                font-size: 14px;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+            padding: 20px 30px;
+            .table_input{
+                min-width: 100px;
+                .table_select_input{
+                    min-width: 180px;
+                }
+                .css-1ff8729-MuiInputBase-root-MuiFilledInput-root{
+                    &::after{
+                    border-bottom: 2px solid #345FA6;
+
+                    }
+                }
+                .MuiFormControl-root{
+                    .MuiInputBase-formControl{
+                        background-color: transparent !important;
+                        &:before{
+                            border-bottom: 1px solid #345FA6;
+                            
+                        }
+                       
+
+                    }
+                }
+                .MuiInputLabel-root {
+                    color: #345FA6;
+                   
+                   
+                }
+                .MuiOutlinedInput-notchedOutline {
+                    border-color:#345FA6;
+                    border-width: 1px;
+            
+                    &:hover {
+                        border-color: #345FA6;
+                    }
+                }
+                
+            }
+            .input_field_outer {
+                margin: 25px 0;
+                .MuiInputLabel-root {
+                    color: var(--primary);
+                }
+            
+                .MuiOutlinedInput-notchedOutline {
+                    border-color: var(--primary);
+                    border-width: 1px;
+            
+                    &:hover {
+                        border-color: var(--primary);
+                    }
+                }
+            
+                .Mui-focused {
+            
+                    .MuiOutlinedInput-notchedOutline {
+                        border-color: var(--primary);
+            
+                        &:hover {
+                            border-color: var(--primary);
+                        }
+                    }
+                }
+            }
+            .dashboar_body_heading {
+                margin-bottom: 20px;
+                    a{
+                        color: #345FA6;
+                        font-size: 22px;
+                        font-weight: 600;
+                        text-decoration: none;
+                    }
+                h1 {
+                    color: #345FA6;
+                    font-weight: 700;
+                }
+            }
+
+            .dashboard_home {
+
+                .dashboar_home_inner {
+                    display: flex;
+
+                    @media (max-width:992px) {
+                        flex-direction: column;
+
+                    }
+
+                    .home_table_container {
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        border-radius: 18px;
+                        width: 70%;
+                        padding: 20px;
+
+                        @media (max-width:992px) {
+                            width: 100%;
+                            order: 2;
+                        }
+
+                        .sortable_table_header {
+                            padding-left: 10px;
+
+                            h3 {
+                                font-weight: 700;
+                                color: rgba(0, 0, 0, 0.7);
+                                font-size: 20px;
+                            }
+                        }
+
+                        
+                    }
+
+                    .new_broad_cast_card {
+                        width: 30%;
+                        padding: 0 10px 10px 20px;
+
+                        .new_broad_cast_card_inner {
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            border-radius: 12px;
+                            padding: 20px 10px 30px 15px;
+                            border: 1px solid #345FA6;
+
+                            h2 {
+                                color: #345FA6;
+                                font-size: 22px;
+                            }
+
+                            p {
+                                color: rgba(0, 0, 0, 0.7);
+                            }
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: fit-content;
+                                padding: 10px 20px;
+                                text-decoration: none;
+                                column-gap: 10px;
+                                font-weight: 700;
+                                background-color: #345FA6;
+                                border-radius: 4px;
+                                color: white;
+                                font-size: 20px;
+
+                                svg {
+                                    fill: white;
+                                }
+                            }
+                        }
+
+                        @media (max-width:992px) {
+                            width: 100%;
+                            padding: 0;
+                            margin: 20px 0;
+                            order: 1;
+                        }
+                    }
+                }
+            }
+
+            .dashboard_idea {
+                .dashboar_idea_inner {
+                    .account_setting_form_container {
+                        margin-top: 60px;
+                        width: 100%;
+                        border-radius: 14px;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        padding: 20px 0;
+
+                       
+
+                        .save_button {
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            column-gap: 10px;
+
+                            button {
+                                border: none;
+                                outline: none;
+                                padding: 10px 50px;
+                                background-color: #345FA6;
+                                border-radius: 4px;
+                                color: white;
+                                font-weight: 600;
+                            }
+
+                            .email_notification_div {
+                                .MuiFormGroup-root {
+                                    .MuiFormControlLabel-root {
+                                        .MuiCheckbox-root {
+                                            color: #345FA6;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .dashboard_directory{
+                .dashboar_directory_inner{
+                        width: 100%;
+                        height:auto;
+                        padding-bottom: 100px;
+                    .Orders_table_main_container{
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        border-radius: 18px;
+                        width: 100%;
+                        padding: 20px;
+                        .sortable_table{
+                            thead{
+                                border-bottom: 1px solid rgba(0,0,0,0.1);
+                            }
+                        }
+                    }
+                }
+            }
+            .dashboard_orders {
+                .dashboard_orders_inner {
+                   
+                    .dashboard_order_container {
+                        width: 100%;
+                        height:auto;
+                        padding-bottom: 100px;
+                        .Orders_table_main_container{
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            border-radius: 18px;
+                            width: 100%;
+                            padding: 20px;
+                        }
+                        .filter_Container {
+                            width: 100%;
+                            height: auto;
+                            
+                            transition: all ease-in-out 0.6s;
+                            .show_filter_outer{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                .show_Filter_Button {
+                                    border: none;
+                                    outline: none;
+                                    background-color: #345FA6;
+                                    padding: 7px 25px;
+                                    border-radius: 4px;
+                                    color: white;
+                                    margin-left: auto;
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            
+
+                            .ShowFilter {
+                                border-radius: 10px;
+                                border: 1px solid #345FA6;
+                                height: auto;
+                                padding: 30px 0;
+                                background-color: white;
+                                transition: all ease-in-out 0.3s;
+                                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            }
+
+                            .Hide_Filter {
+                                transition: all ease-in-out 0.3s;
+                                overflow: hidden;
+                                height: 0px;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+            .dashboard_address{
+                .dashboar_address_inner{
+                    .addressbook_form_container{
+                        border-radius: 8px;
+                        height: auto;
+                        padding: 20px;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        .form_save_button{
+                            button{
+                               border: none;
+                               outline: none;
+                               background-color: #345FA6;
+                               color: white;
+                               padding: 10px 30px;
+                               border-radius: 6px; 
+                            }
+                        }
+                        .addressbook_form_heading{
+                            p{
+                                font-size:22px;
+                                font-weight: 700;
+                                color: #345FA6;
+                            }
+
+                        }
+                        .checkmark_input_outer{
+                            .MuiFormGroup-root {
+                                .MuiFormControlLabel-root {
+                                    .MuiCheckbox-root {
+                                        color:#345FA6;
+                                    }
+                                }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+            .directory_header{
+                display: flex;
+                justify-content: space-between;
+                a{
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    padding: 0px 30px !important;
+                    font-size: 15px !important;
+                    font-weight: 600;
+                    background-color:#345FA6;
+                    color: white !important;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+    }
+
+}
+
+.user_menu_li {
+    .MuiPopover-paper {
+        right: 40px;
+        left: unset !important;
+
+        .MuiList-root {
+            padding-right: 20px !important;
+        }
+    }
+
+}
+
+.MuiPickersPopper-paper{
+    .MuiCalendarOrClockPicker-root{
+        .Mui-selected{
+         background-color:#345FA6 !important;   
+        }
+    }
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.shipping-per-month-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.overview-cards-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 60px;
+    flex-wrap: wrap;
+    .card {
+        min-width: 300px;
+        flex: 1;
+    }
+    a {
+        text-align: right;
+        font-size: 18px;
+        font-weight: 500;
+        color: #345FA6;
+    }
+}
+
+.btn-overview-all-order-btn {
+    background-color: #345FA6 !important;
+    color: white !important;
+    padding: 15px 20px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+}
+
+.MuiInputBase-input {
+    border-radius: 50px !important;
+}
